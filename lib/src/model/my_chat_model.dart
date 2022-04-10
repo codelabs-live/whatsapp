@@ -33,20 +33,19 @@ class MyChatModel extends MyChatEntity {
         );
 
   factory MyChatModel.fromSnapShot(DocumentSnapshot snapshot) {
-    var myList = snapshot.data as Map<String, dynamic>;
     return MyChatModel(
-      senderName: myList['senderName'],
-      senderUID: myList['senderUID'],
-      senderPhoneNumber: myList['senderPhoneNumber'],
-      recipientName: myList['recipientName'],
-      recipientUID: myList['recipientUID'],
-      recipientPhoneNumber: myList['recipientPhoneNumber'],
-      channelId: myList['channelId'],
-      time: myList['time'],
-      isArchived: myList['isArchived'],
-      isRead: myList['isRead'],
-      recentTextMessage: myList['recentTextMessage'],
-      profileURL: myList['profileURL'],
+      senderName: (snapshot.data()as dynamic)['senderName'],
+      senderUID: (snapshot.data()as dynamic)['senderUID'],
+      senderPhoneNumber: (snapshot.data()as dynamic)['senderPhoneNumber'],
+      recipientName: (snapshot.data()as dynamic)['recipientName'],
+      recipientUID: (snapshot.data()as dynamic)['recipientUID'],
+      recipientPhoneNumber: (snapshot.data()as dynamic)['recipientPhoneNumber'],
+      channelId: (snapshot.data()as dynamic)['channelId'],
+      time: (snapshot.data()as dynamic)['time'],
+      isArchived: (snapshot.data()as dynamic)['isArchived'],
+      isRead: (snapshot.data()as dynamic)['isRead'],
+      recentTextMessage: (snapshot.data()as dynamic)['recentTextMessage'],
+      profileURL: (snapshot.data()as dynamic)['profileURL'],
     );
   }
 

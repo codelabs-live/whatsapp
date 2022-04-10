@@ -22,15 +22,14 @@ class UserModel extends UserEntity {
         );
 
   factory UserModel.fromSnapshot(DocumentSnapshot snapshot) {
-    var myList = snapshot.data as Map<String, dynamic>;
     return UserModel(
-      name: myList['name'],
-      email: myList['email'],
-      phoneNumber: myList['phoneNumber'],
-      uid: myList['uid'],
-      isOnline: myList['isOnline'],
-      profileUrl: myList['profileUrl'],
-      status: myList['status'],
+     name: (snapshot.data()as dynamic)['name'] ??'',
+      email: (snapshot.data()as dynamic)['email']??'',
+      phoneNumber: (snapshot.data()as dynamic)['phoneNumber']??'',
+      uid: (snapshot.data()as dynamic)['uid']??'',
+      isOnline: (snapshot.data()as dynamic)['isOnline']??false,
+      profileUrl: (snapshot.data()as dynamic)['profileUrl']??'',
+      status: (snapshot.data()as dynamic)['status']??'',
     );
   }
 

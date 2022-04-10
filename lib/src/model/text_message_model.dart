@@ -24,16 +24,15 @@ class TextMessageModel extends TextMessageEntity {
     time: time,
         );
   factory TextMessageModel.fromSnapShot(DocumentSnapshot snapshot){
-    var myList = snapshot.data as Map<String, dynamic>;
     return TextMessageModel(
-      senderName: myList['senderName'],
-      sederUID: myList['sederUID'],
-      recipientName: myList['recipientName'],
-      recipientUID: myList['recipientUID'],
-      messageType: myList['messageType'],
-      message: myList['message'],
-      messageId: myList['messageId'],
-      time: myList['time'],
+      senderName: (snapshot.data()as dynamic)['senderName'],
+      sederUID: (snapshot.data()as dynamic)['sederUID'],
+      recipientName: (snapshot.data()as dynamic)['recipientName'],
+      recipientUID: (snapshot.data()as dynamic)['recipientUID'],
+      messageType: (snapshot.data()as dynamic)['messageType'],
+      message: (snapshot.data()as dynamic)['message'],
+      messageId: (snapshot.data()as dynamic)['messageId'],
+      time: (snapshot.data()as dynamic)['time'],
     );
   }
   Map<String,dynamic> toDocument(){

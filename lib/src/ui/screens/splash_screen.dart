@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:whatsapp/src/config/style.dart';
 import 'package:whatsapp/src/ui/screens/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -26,13 +27,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Center(
         child: Text(
           "WhatsApp Clone",
           style: TextStyle(
             fontSize: 20,
-            color: Colors.white,
+            color: greenColor,
           ),
         ),
       ),
