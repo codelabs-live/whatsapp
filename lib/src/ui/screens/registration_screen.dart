@@ -21,7 +21,7 @@ class RegistrationScreen extends StatefulWidget {
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
   static Country _selectedFilteredDialogCountry =
-      CountryPickerUtils.getCountryByPhoneCode("+91");
+      CountryPickerUtils.getCountryByPhoneCode("91");
   String _countryCode = _selectedFilteredDialogCountry.phoneCode;
   String _phoneNumber="";
 
