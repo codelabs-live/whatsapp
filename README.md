@@ -3,5 +3,7 @@
 
 
 
-  # Welcome Screen
+ **Welcome Screen**
+
+<img src="https://github.com/codelabs-live/whatsapp/blob/master/screenshots/welcome.png" height=500/>
 
